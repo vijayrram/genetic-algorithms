@@ -17,3 +17,12 @@ def test_dna_class_cannot_be_instantiated_with_positional_arguments() -> None:
 
     with pytest.raises(TypeError):
         _: DNA = DNA(1)  # type: ignore = Pylance.reportCallIssue
+
+
+def test_dna_class_can_be_instantiated_with_keyword_arguments() -> None:
+    """Test to ensure that the DNA class can be instantiated with keyword arguments."""
+
+    dna: DNA = DNA(value=1)
+
+    assert isinstance(dna, DNA)
+    assert dna.kwargs == {"value": 1}
