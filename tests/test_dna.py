@@ -25,4 +25,4 @@ def test_dna_class_can_be_instantiated_with_keyword_arguments() -> None:
     dna: DNA = DNA(value=1)
 
     assert isinstance(dna, DNA)
-    assert dna.kwargs == {"value": 1}
+    assert dna["value"] == 1
